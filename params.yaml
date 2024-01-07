@@ -1,0 +1,20 @@
+data:
+  csv_file_path: ./archive/IMDB_Dataset.csv
+  test_set_ratio: 0.3
+  train_csv_path: ./archive/train.csv
+  test_csv_path: ./archive/test.csv
+
+features:
+  vectorizer: count-vectorizer
+  train_features_path: ./archive/train_features.joblib
+  test_features_path: ./archive/test_features.joblib
+
+train:
+  penalty: l2
+  solver: lbfgs
+  C: .2
+  model_save_path: ./archive/model.joblib
+
+evaluate:
+  metric: accuracy
+  results_save_path: ./archive/results.yaml
